@@ -1,7 +1,7 @@
 class terminfo (
 
-  purge  = undef,
-  backup = undef,
+  $purge  = undef,
+  $backup = undef,
 
 ) {
 
