@@ -1,7 +1,8 @@
 class terminfo (
 
-  $purge  = undef,
-  $backup = undef,
+  $purge   = undef,
+  $backup  = undef,
+  $recurse = undef,
 
 ) {
 
@@ -13,7 +14,7 @@ class terminfo (
   file { '/usr/share/terminfo':
     ensure  => directory,
     source  => "puppet:///modules/${module_name}/terminfo",
-    recurse => true,
+    recurse => $recurse,
     purge   => $purge,
     backup  => $backup,
   }
