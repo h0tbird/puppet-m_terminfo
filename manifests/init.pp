@@ -1,10 +1,10 @@
 class terminfo (
 
-  $purge   = undef,
-  $backup  = undef,
-  $recurse = undef,
+  $purge   = $::terminfo::params::purge,
+  $backup  = $::terminfo::params::backup,
+  $recurse = $::terminfo::params::recurse,
 
-) {
+) inherits terminfo::params {
 
   file { '/usr/share/terminfo':
     ensure  => directory,
